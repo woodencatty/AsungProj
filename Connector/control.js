@@ -6,6 +6,9 @@ function initialize() {
       var config = JSON.parse(data);
 
 
+
+      sendMessage.SubmitError(ctyp.crop(DATA));
+
     });
   }
   

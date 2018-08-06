@@ -12,15 +12,15 @@ module.exports = {
     },
 
 
-    SubmitError: (ID) => {
+    SubmitError: (DATA) => {
 
-
-        POST_APDError = {														//POST요청 JSON데이터 정의
+  POST_APDError = {														//POST요청 JSON데이터 정의
             host: serverIP,
             port: serverPort,
             path: '/device/error',
             method: 'POST'
         };
+      
 
         SubmitErrorcallback = function (response) {
             console.log('HTTP Response Code : ' + response.statusCode);		//리턴코드를 분석하여 상태 확인
@@ -47,7 +47,7 @@ module.exports = {
             console.log(error);							// 관리서버와 연결 불가능할 때에 오류 체크
         });
      
-       // req.setHeader("DATANAME", DATA);											//헤더에 요청 데이터 첨부		
+        req.setHeader("DATANAME", DATA);		//헤더에 요청 데이터 첨부		
 
         req.end();
     }

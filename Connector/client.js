@@ -12,8 +12,7 @@ module.exports = {
     },
 
 
-    SubmitError: (ID) => {
-
+    SubmitError: (DATA) => {
 
         POST_APDError = {														//POST요청 JSON데이터 정의
             host: garewayIP,
@@ -47,8 +46,8 @@ module.exports = {
             console.log(error);							// 관리서버와 연결 불가능할 때에 오류 체크
         });
      
-       // req.setHeader("DATANAME", DATA);											//헤더에 요청 데이터 첨부		
-
+        req.setHeader("name", DATA);											//헤더에 요청 데이터 첨부		
+       
         req.end();
     }
 }    

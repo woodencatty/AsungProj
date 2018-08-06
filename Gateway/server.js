@@ -9,7 +9,9 @@ function Setup_APD_Socket() {
         if (request.method == 'GET') {
             if (request.url == '') {
             } else if (request.url == '') {
+
             } else if (request.url == '') {
+                
             } else {
                 //404Error
                 console.log("GET error : no URI");
