@@ -8,7 +8,7 @@ var serverPort           //서버 PORT
 var method               //REST 메소드
 var path                 //URL
 
-
+//JSON형식으로 데이터를 구성
 var data = {
   wow: "wow",
   Yhea: "Yhea"
